@@ -1,0 +1,59 @@
+/* vars */
+.container-solucion {
+  background-color: #10AFAF;
+}
+.container-solucion .titulo-solucion {
+  background-color: #10AFAF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+.container-form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+@media screen {
+  .container-form {
+    min-width: 200px;
+    max-width: 300px;
+  }
+}
+.container-form .boton-form {
+  padding-top: 20px !important;
+  padding-bottom: 30px !important;
+}
+
+img .ventaja-icon {
+  padding: 40px;
+}
+
+.container-pulsera-tel {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-pulsera-tel .img-tel {
+  width: auto;
+  height: 400px;
+}
+.container-pulsera-tel .img-pul {
+  width: auto;
+  height: 300px;
+}
+
+.titulo-solucion:hover {
+  transform: translate(0px, -15px);
+  transition: all 2s;
+}
+
+.titulo-principal:hover {
+  transform: translate(0px, -15px);
+  transition: all 2s;
+}/*# sourceMappingURL=main.css.map */
