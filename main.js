@@ -107,7 +107,7 @@ switch (eleccionHab) {
 
 // Información de RESERVA
 
-swal( "Tus datos de reserva son:"             
+alert( "Tus datos de reserva son:"             
                                         + 
 `Nombre: ` + NombreApellido            +
 `Fecha nacimiento: `+ FechaNac         +
