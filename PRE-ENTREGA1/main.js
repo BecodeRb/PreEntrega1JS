@@ -1,117 +1,124 @@
+
+
 // Bienvenida
 
 alert(`Bienvenidos a Beco Dimare Hotel Boutique
-Realiza tu reservación`);
-
-
-// Ingresa tus datos personales
-
-let NombreApellido = prompt ("Ingresa tu nombre completo");
-console.log(NombreApellido)
-let FechaNac = prompt ("Ingresa tu fecha de nacimiento (DD/MM/AAAA)");
-console.log(FechaNac) 
-let Telefono = parseInt(prompt ("Ingresa número telefonico")); 
-console.log(Telefono)
-
-
-
-
-
-// Selecciona una fecha
-
-
-function seleccionaFecha(){
-    let FechaElegida;
-
-    do {
-        FechaElegida = parseInt(prompt(`Selecciona una fecha:
-        1 -21/05/2023 
-        2 -22/05/2023
-        3 -23/05/2023
-        4 -24/05/2023
-        5 -25/05/2023
-        6 -26/05/2023
-        7 -27/05/2023
-        `))
-    } while (( FechaElegida < 0 && FechaElegida > 8 ) );
-    return FechaElegida
+@@ -37,7 +38,8 @@ function seleccionaFecha(){
+    return FechaElegida;
 }
 
 eleccion = seleccionaFecha()
 
+let eleccion = seleccionaFecha()
+
 switch (eleccion) {
     case 1:
-        eleccion = "21/05/2023"
+@@ -72,11 +74,11 @@ function seleccionaHab(){
+
+    do {
+        HabElegida = parseInt(prompt(`Selecciona una fecha:
+        1 -Habitación Deluxe
+        2 -Habitación King
+        3 -Suite Deluxe
+        4 -Suite Hooneymooner
+        5 -Suite Presidencial
+        1 -Deluxe King
+        2 -Deluxe Doble
+        3 -Ocean View King
+        4 -Ocean View Double
+        5 -Ocean View Presidential
+    
+        `))
+    } while (( HabElegida > 5 ));
+@@ -87,32 +89,83 @@ eleccionHab = seleccionaHab()
+
+switch (eleccionHab) {
+    case 1:
+        eleccionHab = "Habitación Deluxe"
+        eleccionHab = "Deluxe King"
      break;
     case 2:
-        eleccion = "22/05/2023"
+        eleccionHab = "Habitación King"
+        eleccionHab = "Deluxe Doble"
     break;
     case 3:
-        eleccion = "23/05/2023"
+        eleccionHab = "Suite Deluxe"
+        eleccionHab = "Ocean View King"
     break;
      case 4:
-        eleccion = "24/05/2023"
+        eleccionHab = "Suite Honeymooner"
+        eleccionHab = "Ocean View Double"
     break;
     case 5:
-        eleccion = "25/05/2023"
-     break;
-    case 6:
-        eleccion = "26/05/2023"
-    break;
-    case 7:
-        eleccion = "27/05/2023"
+        eleccionHab = "Suite Presidencial"
+        eleccionHab = "Ocean View Presidential"
     break;
 
-}
+    }
 
-alert( "Tus datos de reserva son:" + NombreApellido  + FechaNac  + Telefono  + eleccion
+
+// Información de RESERVA
+
+alert( "Tus datos de reserva son:"             
+                                        + 
+alert( "Tus datos de reserva son:      " + 
+`Nombre: ` + NombreApellido            +
+`Fecha nacimiento: `+ FechaNac         +
+`Telefono: `+ Telefono                 +
+`Fecha: `+ eleccion                    +
+`Habitación: `+ eleccionHab
+`Fecha:   `+ eleccion                    +
+`Habitación:  `+ eleccionHab
 )
- 
-/*
-//Selecciona una tipo de habitación
-
-let habit1 = "Habitación Deluxe"
-let habit2 = "Habitación King"
-let habit3 = "Suite Deluxe"
-let habit4 = "Suite Honeymooner"
-
-
-// Selecciona cuantos huespedes son
-
-
-//Funcion seleccionar habitación
-
-
-//DATOS RESERVA
-
-alert( 'Tus datos de reserva son: " 
-+ NombreApellido 
-+ FechaNac 
-+ Telefono
-+ FechaElegida
-) 
-
-
-
-
-let FechaElegida = parseInt(prompt ())
-
-
-if( FechaElegida > 0 && FechaElegida< 10){
-    
-    alert("Fecha disponible" )
-
-
-} else {
-    alert("Fecha no disponible.")
-}
 
 
 
 
 
 
+//NUEVO FILTROS Y BUSQUEDA
 
 
-*/
+const HabitacionesBeco = [
+    {nombre: 'Deluxe King', 
+    precio: 15000},
+
+    {nombre: 'Deluxe Doble', 
+    precio: 22000},
+
+    {nombre: 'Ocean View King', 
+    precio: 24000},
+
+    {nombre: 'Ocean View Double', 
+    precio: 32000},
+
+    {nombre: 'Ocean View Presidential', 
+    precio: 38000},
+]
+
+//Buscador Habitación
+
+const resultadoBuscar = HabitacionesBeco.find((el) => el.nombre === "Ocean View King")
+
+
+console.log(resultadoBuscar) 
+
+//Filtrado Habitaciones
+
+const resultadoFiltro = HabitacionesBeco.filter((el) => el.nombre.includes('Ocean'))
+const resultadoFiltro2 = HabitacionesBeco.filter((el) => el.precio < 35000)
+
+
+console.log(resultadoFiltro)
+console.log(resultadoFiltro2)
+
+//REDUCE PARA SUMAR MAS DE UNA HABITACION de Resultado de Filtrado2?
+
+
+total = resultadoFiltro2.reduce((acumulador, el) => acumulador + el.precio, 0)
+
+
+console.log(total)
+
+
 
