@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../sass/main.css">
+    <meta name="description" content="Sistema de control de accesos y cobros sin efectivo o cashless con pulseras RFID">
+    <meta name="keywords" content="RFID, CASHLESS, ACCESO, SOFTWARE, Mexico, brazaletes, telefono nfc, eventos, festivales, hoteles">
+
+</head>
+<body>
+
+
+
+    
+<nav id="navbarPrincipal" class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <nav class="navbar bg-white">
+        <div class="container bg-white">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/logo-smart.png" alt="logo-smartkey" width="auto" height="120">
+          </a>
+        </div>
+      </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="../pages/soluciones.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Estancia
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../pages/habitaciones.html">Habitaciones</a></li>
+              <li><a class="dropdown-item" href="../pages/spa.html">Spa</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://docs.google.com/forms/d/1HsKAHwCiZREdC-iuAOjaFS2vYC6UtoZWbZKJ74yabdc/edit">Solicita un demo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+
+    <!--
+ HABITACIONES:
+
+    {nombre: 'Deluxe King', 
+    precio: 15000},
+
+    {nombre: 'Deluxe Doble', 
+    precio: 22000},
+
+    {nombre: 'Ocean View King', 
+    precio: 24000},
+
+    {nombre: 'Ocean View Doble', 
+    precio: 32000},
+
+    {nombre: 'Ocean View Presidential', 
+    precio: 38000},
+
+-->               
+         
+<section class="container-solucion">
+
+    <h1 class="titulo-solucion">HABITACIONES</h1>
+
+    <div class="container text-center">
+
+        <div id="contenedorHabitaciones" class="row row-cols-1 row-cols-md-3 g-4" >
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="container-form-2 bg-white">
+
+        <h1 class="titulo-principal">
+
+            Datos de Reserva
+        </h1>
+
+        
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellido">
+        </div>
+      
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Telefono</label>
+          <input type="number" class="form-control" id="formGroupExampleInput3" placeholder="">
+        </div>
+    
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Datos adicionales</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        
+        <select id= "formSelect" class="form-select" aria-label="Default select example"> 
+          <option selected="">Me interesa...</option>
+          <option value="1">Actividades en playa</option>
+          <option value="2">Actividades en alberca</option>
+          <option value="3">Avtividades en salon</option>
+          <option value="3">Todas las anteriores</option>
+        </select>
+  
+        <div class="boton-form">
+  
+          <button type="button" class="btn btn-success">Enviar</button>
+  
+        </div>
+  
+        
+  
+      </div>
+
+
+
+
+
+
+</section>
+
+    
+</body>
+<footer>
+
+    <div class="menu-pie">
+        <li><a href="../index.html">Politicas</a></li>
+        <li><a href="../pages/contacto.html">Preguntas frecuentes</a></li>
+        <li><a href="../multimedia.html">Quieres ser distribuidor</a>
+            <ul>
+                <li>Distribuidor Software</li>
+                <li>Distribuidor Brazalete</li>
+            </ul>
+        </li>
+        <li>Contacto</li>
+    </div>   
+    
+    <div class="redes-footer">
+        <a href="https://facebook.com" target="_blank">
+            <img src="../img/iconos/facebook.png" width="700px" alt="facebook">
+        </a> 
+        
+        <a href="https://instagram.com" target="_blank">
+            <img src="../img/iconos/insta.png" width="700px" alt="facebook">
+        </a> 
+    </div>
+
+    <p class="derechos-pie">Todos los Derechos Reservados 2023 © Smart Key Software SA de CV</p>
+
+
+    <script src="/main.js"></script>
+    
+
+</footer>
+</html>

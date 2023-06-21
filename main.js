@@ -1,4 +1,6 @@
 
+
+/*
 // Bienvenida
 
 alert(`Bienvenidos a Beco Dimare Hotel Boutique
@@ -119,40 +121,130 @@ alert( "Tus datos de reserva son:      " +
 
 
 
-
+*/
 
 
 //NUEVO FILTROS Y BUSQUEDA
 
 
-const HabitacionesBeco = [
-    {nombre: 'Deluxe King', 
-    precio: 15000},
+const habitacionesBeco = [
+    {
+        id: 001,
+        nombre: 'Deluxe King', 
+        precio: 15000,
+        imagen:'/img/habit/deluxe king.jpg',
+        descripcion: 'Habitación para 2 personas con cama King, vista a jardin',
+    
+    },
 
-    {nombre: 'Deluxe Doble', 
-    precio: 22000},
+    {   
+        id: 002,
+        nombre: 'Deluxe Doble', 
+        precio: 22000,
+        imagen:'/img/habit/deluxe doble.jpg',
+        descripcion: 'Habitación para 4 personas con 2 camas dobles, vista a jardin',
+        
+    
+    },
+    
+    {
+        id: 003,
+        nombre: 'Ocean View King', 
+        precio: 24000,
+        imagen:'/img/habit/Ocean view king.jpg',
+        descripcion: 'Habitación para 2 personas con cama King, vista frente a el mar',
+    
+    },
 
-    {nombre: 'Ocean View King', 
-    precio: 24000},
 
-    {nombre: 'Ocean View Double', 
-    precio: 32000},
+    {    
+        id: 004,
+        nombre: 'Ocean View Doble', 
+        precio: 32000,
+        imagen:'/img/habit/Ocean view doble.jpg',
+        descripcion: 'Habitación para 4 personas con 2 camas dobles, vista frente a el mar',
+    
+    },
 
-    {nombre: 'Ocean View Presidential', 
-    precio: 38000},
+    {
+        id: 005,
+        nombre: 'Ocean View Presidential', 
+        precio: 38000,
+        imagen:'/img/habit/ocean view presidential.jpg',
+        descripcion: 'Villa para 8 personas con 3 habitaciones con cama King, vista prestigiosa de 360 grados, frente a el mar',
+    
+    },
 ]
 
+let carritoReservas = []
+
+console.log(habitacionesBeco)
+
+let contenedorHabitaciones = document.getElementById("contenedorHabitaciones")
+
+
+
+console.log(contenedorHabitaciones)
+
+habitacionesBeco.forEach((habitacionSola)=>{
+
+    console.log(habitacionSola.nombre)
+    console.log(habitacionSola.id)
+    console.log(habitacionSola)
+
+    let contenedor = document.createElement("div")
+
+    contenedor.innerHTML = `
+
+    <div class="card mb-3">
+      <img src="${habitacionSola.imagen}" class="card-img-top" alt="${habitacionSola.nombre}">
+        <div class="card-body">
+            <h5 class="card-title">${habitacionSola.nombre}</h5>
+                <p class="card-text">${habitacionSola.descripcion}</p>
+                <p class="card-text"><small class="text-body-secondary">$${habitacionSola.precio} por noche</small></p>
+                <button id="botonReservar" type="button" class="btn btn-warning">Reservar</button>
+        </div
+
+      
+
+
+
+    </div> 
+    
+    
+    
+    `
+
+contenedorHabitaciones.append(contenedor)
+
+let botonReservar = document.getElementById("botonReservar")
+
+botonReservar.addEventListener("click",agregarCarrito)
+    
+
+
+})
+
+
+
+function agregarCarrito(){
+
+    console.log("agregar carrito")
+    
+}
+
+/*
 //Buscador Habitación
 
-const resultadoBuscar = HabitacionesBeco.find((el) => el.nombre === "Ocean View King")
+const resultadoBuscar = habitacionesBeco.find((el) => el.nombre === "Ocean View King")
 
 
 console.log(resultadoBuscar) 
 
 //Filtrado Habitaciones
 
-const resultadoFiltro = HabitacionesBeco.filter((el) => el.nombre.includes('Ocean'))
-const resultadoFiltro2 = HabitacionesBeco.filter((el) => el.precio < 35000)
+const resultadoFiltro = habitacionesBeco.filter((el) => el.nombre.includes('Ocean'))
+const resultadoFiltro2 = habitacionesBeco.filter((el) => el.precio < 35000)
 
 
 console.log(resultadoFiltro)
@@ -166,6 +258,6 @@ total = resultadoFiltro2.reduce((acumulador, el) => acumulador + el.precio, 0)
 
 console.log(total)
 
-
+*/
 
 
