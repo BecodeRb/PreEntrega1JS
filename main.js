@@ -202,7 +202,9 @@ habitacionesBeco.forEach((habitacionSola)=>{
             <h5 class="card-title">${habitacionSola.nombre}</h5>
                 <p class="card-text">${habitacionSola.descripcion}</p>
                 <p class="card-text"><small class="text-body-secondary">$${habitacionSola.precio} por noche</small></p>
-                <button id="botonReservar" type="button" class="btn btn-warning">Reservar</button>
+                <div
+                    <button id="botonReservar" type="button" class="btn btn-warning">Reservar</button>
+                </div
         </div
 
       
@@ -226,16 +228,22 @@ botonReservar.addEventListener("click",agregarCarrito)
 })
 
 
-
 function agregarCarrito(){
 
-    console.log("agregar carrito")
-    
+alert("Agregado a Reserva")
+
+console.log("Agregado a Reserva")
+
 }
 
-/*
-//Buscador Habitación
 
+
+
+ 
+/*
+//Buscador Habitación 
+
+ 
 const resultadoBuscar = habitacionesBeco.find((el) => el.nombre === "Ocean View King")
 
 
@@ -258,6 +266,6 @@ total = resultadoFiltro2.reduce((acumulador, el) => acumulador + el.precio, 0)
 
 console.log(total)
 
-*/
+localStorage.setItem(carritoReservas)
 
-
+*/ 
